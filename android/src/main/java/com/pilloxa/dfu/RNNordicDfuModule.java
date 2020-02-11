@@ -37,6 +37,8 @@ public class RNNordicDfuModule extends ReactContextBaseJavaModule implements Lif
         if (name != null) {
             starter.setDeviceName(name);
         }
+        starter.setPacketsReceiptNotificationsEnabled(true);
+        starter.setPacketsReceiptNotificationsValue(6);
         starter.setUnsafeExperimentalButtonlessServiceInSecureDfuEnabled(true);
         starter.setZip(filePath);
         final DfuServiceController controller = starter.start(this.reactContext, DfuService.class);
