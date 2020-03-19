@@ -224,6 +224,7 @@ RCT_EXPORT_METHOD(startDFU:(NSString *)deviceAddress
                                             target:peripheral]
                                            withFirmware:firmware];
 
+        initiator.packetReceiptNotificationParameter = 6;
         initiator.logger = self;
         initiator.delegate = self;
         initiator.progressDelegate = self;
